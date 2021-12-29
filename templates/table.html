@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Reddit Display</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+    <link rel="stylesheet" href="/static/styles.css"/>
+    <h1 id="headTitle"> Redi Project </h1>
+</head>
+
+<body id="center">
+    
+    <table class="table table-sortable">
+        <thead>
+        
+            {% for header in heading %}
+            <th id="list"> {{ header }}</th>
+            {% endfor %}
+            
+        </thead>
+        
+        
+        <tbody>
+            {% for row in data %}
+            <tr>
+                {% for cell in row %}
+                <td> {{ cell }}</td>
+            
+                {% endfor %}
+        
+            </tr>
+            {% endfor %}
+        </tbody>
+        
+        
+    </table>
+    <script src="./static/tablesort.js"></script>
+
+</body>
+
+</html>
